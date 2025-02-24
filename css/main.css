@@ -1,0 +1,338 @@
+/*=================================================================
+  main.css
+  Base Styles and Components 
+
+  This file contains global styles and components that apply to all
+  pages of the website. Including typography, colors, utilities and
+  site navigation.
+==================================================================*/
+
+/*===============================
+  CSS Base Styles and Variables
+================================*/
+
+:root {
+    --primary-color: #1e1e1e;
+    --secondary-color: hsla(216, 92%, 70%, 1);
+    --accent-color: hsl(19, 31%, 50%);
+    --text-color: rgb(255, 255, 255);
+    --subtext-color: hsla(0, 18%, 89%, 1);
+    --highlight-text-color: hsla(120, 49%, 53%, 1); 
+    --background-color: rgba(23, 22, 22, 1);
+    --shade-color: rgba(0, 0, 0, 0.125);
+    --shade-color-light: rgba(63, 60, 60, 0.3);
+    --shade-color-thru: rgba(16, 15, 15, 0.2);
+    --ff-primary: 'Playfair Display', sans-serif;
+    --h1-font: bold 2.75rem / 1.5 var(--ff-primary);
+    --h2-font: bold 2rem / 1.5 var(--ff-primary);
+    --h3-font: bold 1.75rem / 1.5 var(--ff-primary);
+    --links: bold 1.125rem / 1.5 var(--ff-primary);
+    --p: 1rem / 1.5 var(--ff-primary);
+    --subtext: 0.875rem / 1.5 var(--ff-primary);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: var(--ff-primary);
+    color: var(--text-color);
+    background-color: var(--background-color);
+    background-size: cover;
+    background-position: center;
+}
+
+h1 {
+    font: var(--h1-font);
+}
+
+h2 {
+    font: var(--h2-font);
+}
+
+h3 {
+    font: var(--h3-font);
+}
+
+p {
+    font: var(--p);
+}
+
+.subtext {
+    font: var(--subtext);
+}
+
+/* Link States */
+
+a {
+    color: rgba(167, 159, 159, 0.8);
+    text-decoration: none;
+    font-weight: 400;
+    transition: color 0.3s, transform 0.3s;
+}
+
+a:visited:not(nav ul li a, .footer-nav-links a) {
+    color: hsla(300, 30%, 50%, 1);
+}
+
+a:hover {
+    color: var(--secondary-color);
+}
+
+a:active {
+    color: var(--secondary-color);
+}
+
+a:focus {
+    outline: 2px solid var(--secondary-color);
+    outline-offset: 2px;
+}
+
+ul li:first-of-type a {
+    font-weight: bold;
+    color: var(--highlight-text-color);
+}
+
+ul li:last-of-type a {
+    color: var(--accent-color);
+}
+
+/*============================================================
+Highlight target elements for the Cross-Reference hyperlinks
+============================================================*/
+
+[id]:target {
+    outline: 3px solid transparent;
+    outline-offset: 1px;
+    animation: highlight 5s ease-in-out;
+    scroll-margin-top: 150px;
+}
+
+@keyframes highlight {
+    0% {
+        outline-color: transparent;
+    }
+    50% {
+        outline-color: rgb(45, 124, 244);
+    }
+    100% {
+        outline-color: transparent;
+    }
+}
+
+/*====================================================
+  Component Styles
+
+  This section contains the styles for the components 
+  such as the navigation bar, footer and time-clock.
+=====================================================*/
+
+/* Navigation Bar */
+
+header {
+    background-color: transparent;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    max-height: 90px;
+    top: 0;
+    right: 0;
+    left: 0;
+    padding: 20px;
+    z-index: 1000;
+    background-color: var(--shade-color);
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 4px var(--shade-color-light); 
+}
+
+.main-nav.scrolled {
+    background-color: var(--background-color);
+}
+
+.main-nav.scrolled .submenu {
+    background-color: var(--background-color);
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    flex-grow: 1;
+    justify-content: center;
+    text-shadow: 1px 1px 1px var(--shade-color);
+}
+
+nav ul li {
+    list-style: none;  
+}
+
+nav ul li a {
+    text-decoration: none;
+    color:var(--text-color);
+    transition: color 0.5s ease;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: var(--secondary-color);
+    transform: scale(1.1);
+}
+
+.logo {
+    max-height: 50px;
+    max-width: 200px;
+    object-fit: contain;
+    transition: transform 0.7s ease
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+/*===============================================
+    Time Clock 
+================================================*/
+
+.nav-clock {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: monospace;
+    font-size: 1rem;
+    color: var(--text-color);
+    margin-left: auto;
+    padding: 0.5rem;
+    background-color: var(--shade-color-light);
+    border-radius: 4px;
+    width: fit-content;
+}
+
+.nav-clock.open {
+    border: 2px solid #28a745;
+}
+
+.nav-clock.closed {
+    border: 2px solid #dc3545;
+}
+
+.opens-at {
+    font-size: 0.8em;
+    margin-top: 4px;
+}
+
+/*============================================================
+Footer including the navigation, contact, and social links
+============================================================*/
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--background-color);
+    padding: 2rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 100%;
+    padding: 0 1rem;
+}
+
+.footer-content a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer-content a:hover {
+    text-decoration: underline;
+}
+
+.footer-accordion {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+    flex: 1;
+}
+
+.footer-nav-links {    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    list-style: none;
+    padding: 0;
+}
+
+.footer-nav-links a {
+    text-decoration: none;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.social-links a {
+    display: flex;
+    justify-content: center;
+    color: var(--text-color);
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--secondary-color);    
+}
+
+.copyright-section {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    border-top: 1px solid #ccc;
+    width: 100%;
+}
+
+.copyright-section p {    
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+/* Submenu */
+
+.main-nav .submenu li {
+    padding: 8px 15px;
+    list-style: none;
+}
+
+.submenu li{
+    list-style: none;
+    padding-left: 10px;
+}
+
+.submenu li:first-of-type a,
+.submenu li:last-of-type a {
+    font-weight: normal;
+    color: inherit;
+}
+
+.nav-item.has-submenu.active .submenu {
+    display: block;
+}
+
+

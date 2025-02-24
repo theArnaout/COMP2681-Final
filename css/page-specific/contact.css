@@ -1,0 +1,153 @@
+/*=========================================
+  contact.css
+  Contact Page Styles: Grid Layout
+
+  This stylesheet contains styles specific 
+  to the Contact page layout.
+==========================================*/
+
+  .contact-hero > img {
+    max-width: 100%;
+    width: 100%;
+    max-height: 100%;
+    opacity: 0.4;
+    height: 60vh;
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "header-title"
+      "contact-title"
+      "contact-container"  
+      "map-title"
+      "map-address"
+      "map";
+      
+    gap: 15px;
+    padding: 15px;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  
+  .map iframe {
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+  }
+  
+  .form-group {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .buttons {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }  
+
+  .header-title {
+    grid-area: header-title;
+    text-align: center;
+    background-color: var(--background-color);
+  }
+
+  .map-title h2 {
+    grid-area: map-title;
+    text-align: center;
+  }
+
+  .map-address { 
+    grid-area: map-address; 
+    text-align: center; 
+  }
+
+  .map {
+    grid-area: map;
+  }
+
+  .contact-container {
+    grid-area: contact-container;
+  }
+
+  .contact-title { 
+    grid-area: contact-title; 
+    text-align: center;
+    align-self: center;
+  }
+
+  .contact-form {
+    grid-area: contact-form;
+  }
+  
+  input[type="text"],
+  input[type="tel"],
+  input[type="email"],
+  input[type="password"],
+  select,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    background-color: white;
+  }
+  
+  textarea {
+    height: 150px;
+  }
+  
+  input[type="submit"],
+  input[type="reset"] {
+    width: 100%;
+    color: var(--text-color);
+    text-shadow: 1px 1px 1px var(--shade-color);
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 10px;
+    transition: background-color 0.3s;
+  }
+  
+  input[type="submit"] {
+    background-color: hsla(129, 60%, 35%, 0.751);
+}
+
+.required {
+    color: red;
+}
+
+input[type="reset"] {
+    background-color: hsla(0, 100%, 50%, 0.5);
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background-color: #0056b3;
+}
+
+input:focus:invalid {
+    border: 2px solid red;
+}
+
+input:focus:valid {
+    border: 2px solid var(--highlight-text-color);
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    display: block;
+    margin-bottom: 5px;
+}
+  
+.input-error {
+    border: 1px solid red !important;
+}

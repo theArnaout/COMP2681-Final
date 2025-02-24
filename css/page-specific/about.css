@@ -1,0 +1,104 @@
+/*=========================================
+  about.css
+  About Page Styles: Positioning Layout
+
+  This stylesheet contains styles specific 
+  to the About page layout.
+==========================================*/
+.about-hero {
+    position: relative;
+    width: 100%;
+    opacity: 0.2;
+    text-align: center;
+}
+.about-hero img {
+    max-width: 100%;
+    width: 100%;
+}
+.discover {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+.discover h2 {
+    position: relative;
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #333;
+}
+#discover-wrapper {
+    position: relative;
+}
+.discover-content {
+    position: relative;
+    width: 65%;
+    padding-right: 30px;
+    letter-spacing: 0.7px;
+    line-height: 1.5;
+}
+.discover-content h3 {
+    position: relative;
+    margin-bottom: 20px;
+}
+.line-bottom {
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--shade-color-light);
+}
+#quote-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30%;
+    padding: 20px;
+    margin-right: 20px;
+    background-color: var(--shade-color-thru);
+    border-radius: 30px;
+    border-left: 4px solid var(--shade-color-light);
+    box-shadow: -4px -4px 10px red;
+}
+blockquote {
+    position: relative;
+    font-style: italic;
+    font-weight: 300;
+    line-height: 1.5;
+    letter-spacing: 0.8px;
+    margin-bottom: 15px;
+}
+blockquote > p {
+    text-shadow: 2px 2px 10px white;
+}
+cite {
+    position: relative;
+    display: block;
+    text-align: right;
+    font-weight: bold;
+}
+.reference {
+    position: absolute;
+    bottom: -85px;
+    right: 0;
+    font-size: 0.8em;
+    line-height: 1.5;
+    color: var(--accent-color);
+}
+.rotated-image {
+    position: absolute;
+    top: 85%;
+    left: 78%;
+}
+.flag {
+    position: relative;
+    width: 100px;
+    height: auto;
+    transform: rotate(90deg);
+    transition: transform 0.3s ease;
+}
+.flag:hover {
+    transform: rotate(0deg);

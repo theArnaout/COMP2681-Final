@@ -1,0 +1,393 @@
+/*===============================================
+  mobile.css
+  Responsive Styles for Compact Devices
+
+  This stylesheet contains styles specific to the 
+  responsive design of the website for mobile. 
+================================================*/
+
+/*================================================
+  Base Styles 
+================================================*/
+
+@media (max-width: 767px) {
+    body {
+        font-size: 16px;
+        line-height: 1.5rem;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h2 {
+        font-size: 1.3em;
+    }
+
+    h3 {
+        font-size: 1.1em;
+    }
+
+    p {
+        font-size: 0.9em;
+    }
+}
+
+/*=========================================
+  Navigation
+==========================================*/
+
+/* Menu toggle */
+
+.menu-toggle {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-color);
+    margin: 3px 0;
+    transition: 0.4s;
+}
+
+/* Main Navigation Styles */
+
+@media (max-width: 767px) {
+
+    .main-nav {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .menu-toggle {
+        display: flex;
+        order: 3;
+    }
+
+    .nav-links {
+        display: none;
+        position: fixed;
+        top: 0;        
+        width: 100%;
+        height: 100vh;
+        background-color: var(--background-color);
+        flex-direction: column;
+        align-items: center;
+        transition: 0.3s ease;
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        display: flex;
+        left: 0;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+        opacity: 0;
+        transform: translateX(-50px);
+        transition: opacity 0.3s, transform 0.3s;
+        text-align: center;
+    }
+
+    .nav-links.active li {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .nav-links li a {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .menu-toggle.active .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .menu-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    .submenu {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+
+    .nav-item.has-submenu {
+        text-align: center;
+    }
+ 
+    .nav-item.has-submenu.active .submenu {
+        max-height: 300px;
+    }
+
+    .nav-clock {
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+    }
+}
+
+/* Mobile Footer Styles */
+
+@media (max-width: 767px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+ 
+    .footer-accordion {
+        border-bottom: 1px solid var(--shade-color);
+    }
+ 
+    .accordion-header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 15px;
+        cursor: pointer;
+    }
+ 
+    .toggle-icon {
+        align-items: center;
+        margin-left: 10px;
+        width: 20px;
+        height: 20px;
+        transition: transform 0.3s ease;
+        transform-origin: center;
+    }
+ 
+    .toggle-icon.active {
+        transform: rotate(90deg);
+    }
+
+    .menu-icon {
+        fill: var(--text-color);
+    }
+ 
+    .accordion-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        padding: 0 15px;
+    }
+ 
+    .accordion-content.active {
+        max-height: 520px;
+        padding: 20px;
+    }   
+
+    .social-links a {
+        position: relative;
+    }
+
+    .social-links a + a {
+        margin-top: 1rem;
+    }
+    
+    .social-links a:hover::after {
+        content: attr(title);
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 5px;
+        background: var(--background-color);
+        border-radius: 4px;
+        font-size: 0.8rem;
+        white-space: nowrap;
+    }
+ }
+
+/*=========================================
+  Home Page Responsive Styles
+==========================================*/
+
+@media (max-width: 767px) {
+    .hero {
+        height: 47vh;
+        background-size: 175% auto;
+        background-position: 75%;
+        background-repeat: no-repeat;
+    } 
+
+    .hero-content {
+        display: flex;
+        align-items: center;
+    }
+
+    .hero-content h1, .hero-content h3 {
+        display: none;
+    }
+
+    .hero-content button {
+        margin-top: 250px;
+    }
+
+    .hero-content p {
+      display: none;
+    }
+
+    .menu-header p {
+        display: none;
+    }
+
+    .multimedia {
+        display: none;
+    }
+
+    .menu-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: none;
+    }
+}
+
+/*=========================================
+  About Page Responsive Styles
+==========================================*/
+
+@media (max-width: 767px) {
+    .about-hero img {
+        height: 31vh;
+    }
+
+    .discover-content,
+    #quote-container {
+        position: static;
+        width: 100%;
+        padding: 0;
+    }
+
+    #quote-container {
+        box-shadow: none;
+        padding: 0;
+        margin-top: 40px;
+        border-left: none;
+    }
+
+    blockquote > p {
+        text-shadow: none;
+        font-size: 1rem;
+    }
+
+    .reference {
+        bottom: -15%;
+    }
+
+    .rotated-image {
+        display: none;
+    }
+}
+
+/*=========================================
+  Menu Page Responsive Styles
+==========================================*/
+
+@media screen and (max-width: 767px) {
+    .menu-header-image {
+        height: 30vh;
+    }
+
+    .dish-image {
+        float: none;
+        display: block;
+        width: 100%;
+        border-radius: 5px;
+    }
+
+    .menu-item {
+        width: 60%;
+        margin: 10px auto;
+        padding: 0;
+    }
+
+    .dish-info {
+        width: 100%;
+        clear: both;
+        text-align: center;
+        margin-top: 10px;
+    }
+}
+
+/*=========================================
+  Contact Page Responsive Styles
+==========================================*/
+
+@media (max-width: 767px) {
+    .contact-hero {
+        width: 100%;
+        height: 40vh;
+    }
+}
+
+/*=========================================
+  Cross Reference Responsive Styles
+==========================================*/
+
+@media (max-width: 767px) {
+    .cross-reference-banner {
+        height: 30vh;
+        padding: 0;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .cross-reference-banner h1 {
+        font-size: 2em;
+    }
+
+    .cross-reference-banner p {
+        font-size: 1em;
+    }
+
+    .requirement .site-map {
+        width: 100%;
+    }
+}
+
+/*=========================================
+  Evaluation page
+==========================================*/
+
+@media (max-width: 767px) {
+    .evaluation-hero {
+        height: 35vh;
+    }
+
+    .rating-table tr {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .evaluation-form {
+        margin: 1rem;
+        padding: 1rem;
+    }
+
+    .rating-table td {
+        vertical-align: middle;
+        min-width: auto;
+    }
+}
+

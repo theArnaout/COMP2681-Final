@@ -1,0 +1,160 @@
+/*================================================
+  tablet.css
+
+  Responsive Tablet Design (Between 601px and 900px)
+================================================*/
+
+/*================================================
+  Font Sizes
+================================================*/
+
+@media (min-width: 768px) and (max-width: 991px) {
+    body {
+        font-size: 17px;
+    }
+
+    h1 {
+        font-size: 2rem; /* ~30px */
+    }
+
+    h2 {
+        font-size: 1.5rem; /* ~22.5px */
+    }
+
+    h3 {
+        font-size: 1.25rem; /* ~18.75px */
+    }
+
+    p {
+        font-size: 1rem; /* ~15px */
+    }
+
+/*================================================
+  Navigation Styles
+================================================*/
+
+@media (min-width: 768px) and (max-width: 991px)    {
+    .main-nav .submenu {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: inherit;
+        min-width: 100px;
+        box-shadow: 0 2px 4px var(--shade-color-light);
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        display: none;
+    }
+
+    .submenu {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+
+    .nav-item.has-submenu {
+        text-align: center;
+    }
+ 
+    .nav-item.has-submenu.active .submenu {
+        max-height: 300px;
+    }
+
+    .menu-toggle {
+        display: none; 
+    }
+
+    .nav-links {
+        display: flex; 
+    }
+
+    .footer-accordion .accordion-content {
+        display: block; 
+        align-items: center;
+    }
+
+    .accordion-header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 15px;
+        cursor: pointer;
+    }
+
+    .toggle-icon {
+        display: none; 
+    }
+
+    .submenu {
+        display: none;
+    }
+}
+
+/*================================================
+  Home Page Styles
+================================================*/
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .hero {
+        height: 40vh;
+    }
+
+    .hero-content {
+        gap: 1.5rem;
+    }
+}
+
+/*================================================
+  About Page Styles
+================================================*/
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .reference {
+        bottom: -50%;
+    }
+
+    .rotated-image {
+        display: none;
+    }
+}
+
+/*================================================
+  Menu Page Styles
+================================================*/
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .menu-header-image {
+        height: 30vh;
+    }
+}
+
+/*================================================
+  Contact Page Styles
+================================================*/
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .grid-container {
+      gap: 20px;
+      column-gap: 20px;
+      max-width: 1400px;
+      padding: 20px;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 5% 5% 15% 10% 30%;
+      grid-template-areas: 
+            "header-title header-title"
+            "contact-title map-title"
+            "contact-container map-address"
+            "contact-container map"
+            ". map";
+    }
+    
+    .map iframe {
+        height: 700px;
+    }
+    
+    .buttons {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+}

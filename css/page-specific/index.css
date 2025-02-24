@@ -1,0 +1,182 @@
+/*=========================================
+  index.css
+  Home Page Styles: Flexbox Layout
+
+  This stylesheet contains styles specific 
+  to the Home page layout.
+==========================================*/
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.74), rgba(39, 26, 8, 0.462)), url("../../media/images/pistaDondurma.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 60vh;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px 10px 10px 0;
+    gap: 2rem; 
+    letter-spacing: 1px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.menu-section {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.menu-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    margin: 10px 10px 20px 10px;
+    line-height: 3rem;
+    color: var(--text-color);
+}
+
+.menu-button {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.menu-block {
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.menu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.5rem;
+    border: 1px solid var(--accent-color);
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px;
+    width: 250px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.menu-item img {
+    max-width: 100%;
+    width: inherit;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.menu-item:hover img {
+    transform: scale(1.05);
+}
+
+.multimedia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    gap: 1rem;
+}
+
+.multimedia video {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+.discover {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+.discover-class {
+    max-width: 100%;
+    width: 100%;
+}
+
+.discover-content {
+    padding: 20px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.discover-content h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.quote {
+    margin-bottom: 20px;
+}
+
+.quote p {
+    font-size: 1.5em !important;
+}
+
+.drop-cap {
+    font-size: 3em;
+    line-height: 0.8;
+    margin-right: 0;
+    color: var(--highlight-text-color);
+    display: inline-block;
+    vertical-align: top;
+}
+
+.reference {
+    font-size: 0.7em; 
+    color: #555;
+}
+
+.reference a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.reference a:hover {
+    text-decoration: underline;
+}
+
+.line-bottom {
+    height: 2px;
+    background-color: #ccc;
+    margin-top: 50px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}

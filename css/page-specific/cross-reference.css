@@ -1,0 +1,137 @@
+/*=========================================
+  cross-reference.css
+  Cross Reference Page Styles
+  
+  This stylesheet contains styles specific 
+  to the Cross Reference page layout
+==========================================*/
+
+body, html {
+    font-family: var(--ff-primary);
+    color: var(--text-color);
+}
+
+.cross-reference-banner {  
+    width: 100%;
+    height: 35vh;
+    margin: 0;
+    padding: 5px;
+}
+
+.reference-banner-image {
+    width: 100%;
+    height: 35vh;
+    padding: 5px;
+    background-image: url('../../media/images/reference_image.jpeg');    
+    background-size: cover;
+    background-origin: border-box;
+    background-clip: border-box;
+    opacity: 0.4;
+}
+
+.page-title {
+    text-align: center;
+}
+
+section {
+    padding: 20px;
+    margin: 20px 0;
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+}
+
+.requirement h3 {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.web-container, .code-examples, .requirement {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+}
+
+main a, main li, main dd, main dt, main dl, main ul, main ol {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+dl {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#test {
+    scroll-margin-top: 200px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+dl + dl {
+    margin-top: 20px;
+}
+
+dl#nested-list {
+    padding: 15px;
+    border: none;
+}
+
+dt {
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+dd {
+    margin: 0 0 10px 0;
+}
+
+.requirement ul, .requirement ol {
+    margin-left: 20px;
+}
+
+a[href^="#"] {
+    color: rgb(176, 146, 146);
+}
+
+/* Site Map Image Styles */
+
+.requirement img.site-map {
+    width: 80%;
+    max-width: 1000px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+/* Code Examples Styles */
+
+.code-examples {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.code-example {    
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+}
+
+pre {
+    overflow-x: auto;
+    width: 100%;
+}
+

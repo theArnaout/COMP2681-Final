@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Helvaci Ali - Experience the taste of Turkey's famous semolina ice cream">
+    <meta name="keywords" content="dondurma, turkish, helwa, helvaci, ice cream, dessert, sweets, Mississauga">
+    <meta name="author" content="Mohamad Arnaout">
+    <title>Helvaci Ali Canada - Contact</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Playfair Display' rel='stylesheet'>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/mobile.css" media="screen and (max-width: 767px)">
+    <link rel="stylesheet" href="../css/page-specific/contact.css">
+    <link rel="stylesheet" href="../css/desktop.css" media="screen and (min-width: 992px)">
+    <link rel="stylesheet" href="../css/tablet.css" media="screen and (min-width: 768px) and (max-width: 991px)">
+    <script src="../js/main.js" defer></script>
+    <script src="../js/nav.js" defer></script>
+    <script src="../js/contact-form.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="../media/images/slogo.png" alt="website logo" class="logo">
+                </a>                
+            </div>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li class="nav-item has-submenu">
+                    <a href="#">Contact</a>
+                    <ul class="submenu">
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="evaluation.html">Evaluate Us</a></li>
+                    </ul>
+                </li>
+                <li><a href="cross-reference.html">Cross Reference</a></li>
+            </ul>
+            <div id="localTimeClock" class="nav-clock"></div>
+        </nav>
+    </header>
+    <main>
+        <section class="contact-hero">
+                <img src="../media/images/istanbul_sofia1.jpeg" alt="istanbul sofia" class="contact-hero-image">
+        </section>
+        <div class="grid-container">
+            <div class="header-title">
+                <h1>Contact Us</h1>
+            </div>
+
+            
+            <div class="contact-title">
+                <h2>We want to hear from you!</h2>
+                <h3>Contact Form</h3>
+            </div>
+                
+            <div class="contact-container">
+                <div class="contact-form" id="contact-form">
+                    <div id="error"></div>  
+                    <form name="cOrder" id="cOrder" action="cOrder.cgi" method="post" onsubmit="return validateForm()" novalidate>
+                        <div class="form-group">
+                            <label for="fullName">Full Name <span class="required"> *</span></label>
+                            <input type="text" id="fullName" name="fullName" placeholder="Full Name" pattern="[A-Za-z]+\s[A-Za-z]+" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="city">City </label>
+                            <input type="text" id="city" name="city" placeholder="City">
+                        </div>
+                        <div class="form-group">
+                            <label for="province">Province/Territory </label>
+                            <select name="province" id="province">
+                                <option value="" disabled selected>Select Province</option>
+                                <option value="ontario">Ontario</option>
+                                <option value="quebec">Quebec</option>
+                                <option value="british-columbia">British Columbia</option>
+                                <option value="alberta">Alberta</option>
+                                <option value="nova-scotia">Nova Scotia</option>
+                                <option value="manitoba">Manitoba</option>
+                                <option value="new-brunswick">New Brunswick</option>
+                                <option value="newfoundland-and-labrador">Newfoundland and Labrador</option>
+                                <option value="prince-edward-island">Prince Edward Island</option>
+                                <option value="saskatchewan">Saskatchewan</option>
+                                <option value="yukon">Yukon</option>
+                                <option value="northwest-territories">Northwest Territories</option>
+                                <option value="nunavut">Nunavut</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email address <span class="required"> *</span></label>
+                            <input type="email" id="email" name="email" placeholder="example@example.com" required>
+                        </div>
+                        <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="(###)###-####" pattern="\(\d{3}\)\d{3}-\d{4}">
+                        </div>
+                        <div class="form-group">
+                            <label for="reason">Reason for Contacting Us<span class="required"> *</span></label>
+                            <select name="reason" id="reason" required>
+                                <option value="" disabled selected>Select Reason</option>
+                                <option value="order">Order</option>
+                                <option value="complaint">Complaint</option>
+                                <option value="suggestion">Suggestion</option>
+                                <option value="feedback">Feedback</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact">Would you like to be contacted?<span class="required"> *</span></label>
+                            <select name="contact" id="contact" required>
+                                <option value="" disabled selected>Select one</option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>                            
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your message</label>
+                            <textarea name="message" id="message" required></textarea>
+                        </div>
+                        <div class="buttons" id="buttons">
+                            <input type="submit" value="Submit Details" name="submit" id="submit">
+                            <input type="reset" value="Cancel Details" name="cancel" id="cancel">
+                        </div>
+                    </form>
+                </div>    
+            </div>
+
+            <div class="map-title">
+                <h2>Visit Us</h2>
+            </div>
+            
+                <div class="map-address">
+                    <p>3535 Odyssey Dr Unit 89<br>Mississauga Ontario L7G0J7<br>Canada</p>
+                    <br>
+                    <p>Email: info@helvaciali.ca</p>
+                    <p>Phone: +1 888 HELVACI (435 8224)</p>
+                    <p>Phone: (416) 765-4567</p>
+                </div>
+                <div class="map">
+                    <iframe 
+                        src="https://maps.google.com/maps?t=m&output=embed&iwloc=near&z=16&q=helvaci+ali+3535+odyssey+Dr+unit+89%2C+Mississauga+Ontario+Canada" 
+                        width="300" 
+                        height="200" 
+                        style="border:0;" 
+                        allowfullscreen=""
+                        loading="lazy">
+                    </iframe>
+                </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-accordion">
+            <div class="accordion-header">
+                <h3>Navigation</h3>
+                <img src="../media/icons/menu-icon.svg" alt="Toggle Menu" class="toggle-icon">
+            </div>
+            <div class="accordion-content">
+                <ul class="footer-nav-links">
+                    <li class="nav-item"><a href="index.html">Home</a></li>
+                    <li class="nav-item"><a href="about.html">About</a></li>
+                    <li class="nav-item"><a href="menu.html">Menu</a></li>
+                    <li class="nav-item has-submenu">
+                        <a href="#">Contact</a>
+                        <ul class="submenu">
+                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="evaluation.html">Evaluate Us</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="cross-reference.html">Cross Reference</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-accordion">
+            <div class="accordion-header">
+                <h3>Contact Us</h3>
+                <img src="../media/icons/menu-icon.svg" alt="Toggle Menu" class="toggle-icon">
+            </div>
+            <div class="accordion-content">
+                <p>3535 Odyssey Dr Unit 89<br>Mississauga Ontario L7G0J7<br>Canada</p>
+                <p>Email: info@helvaciali.ca</p>
+                <p>Phone: (416) 765-4567</p>
+            </div>
+        </div>
+
+        <div class="footer-accordion">
+            <div class="accordion-header">
+                <h3>Follow Us</h3>
+                <img src="../media/icons/menu-icon.svg" alt="Toggle Menu" class="toggle-icon">
+            </div>
+            <div class="accordion-content">
+                <div class="social-links">
+                    <a href="https://www.tiktok.com/@helvaciali_canada" target="_blank" title="Tiktok">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+                    <a href="https://www.instagram.com/helvaciali.canada/" target="_blank" title="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://www.facebook.com/helvacialiontario/" target="_blank" title="Facebook">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-section">
+            <p>Copyright &copy; 2025 Helvaci Ali Inc.</p>
+            <p>Last updated: <span id="lastModified"></span></p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
