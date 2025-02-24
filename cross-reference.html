@@ -9,7 +9,6 @@
     <title>Helvaci Ali Canada - Cross Reference</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">  
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-    <link href='https://fonts.googleapis.com/css?family=Playfair Display' rel='stylesheet'>
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/desktop.css" media="screen and (min-width: 992px)">
     <link rel="stylesheet" href="../css/tablet.css" media="screen and (min-width: 768px) and (max-width: 991px)">
@@ -44,19 +43,14 @@
                 </li>
                 <li><a href="cross-reference.html">Cross Reference</a></li>
             </ul>
-            <div id="localTimeClock" class="nav-clock" id="nav-clock"></div>
+            <div id="localTimeClock" class="nav-clock"></div>
         </nav>
     </header>
 
     <main>
-        <section class="cross-reference-banner">
-            <div class="banner-content">
-                <div class="reference-banner-image" id="opacity-example1">
-                    
-                </div>
-                
-            </div>
-        </section>
+        <div class="cross-reference-banner">
+            <div class="reference-banner-image" id="opacity-example1"></div>
+        </div>
         <section class="page-title">
             <h1>Cross-Reference List</h1>
             <p>Project Requirements Links and Descriptions</p>
@@ -132,7 +126,7 @@
                     <dd> Copyright symbol displayed at the bottom of the footer to the extreme left. It shows the version of the website.</dd>
                     <dt>D.<a href="#meta-tags-example"> Meta Tags</a></dt>
                     <dd> This link will highlight the code snippet below which shows the meta tags used in the head section of the website. The meta tags provide a brief description of the website, keywords and viewport meta tag to ensure the website is responsive.</dd>
-                    <div class="code-example" id="meta-tags-example">                
+                    <dd class="code-example" id="meta-tags-example">                
                         <pre><code>
                         &lt;head&gt;
                             &lt;meta charset="UTF-8"&gt;
@@ -142,7 +136,7 @@
                             &lt;meta name="author" content="Mohamad Arnaout"&gt;                    
                         &lt;/head&gt;
                         </code></pre>
-                    </div>
+                    </dd>
                     <dt>E.<a href="#lastModified" target="_blank"> Footer with Time Stamp</a></dt>
                     <dd> Date and time of last update. It is updated automatically through the use of JavaScript. The location of the time-stamp is at the bottom of the footer on the extreme right.</dd>
                 </dl>
@@ -151,7 +145,7 @@
             <div class="requirement" id="minimum-requirements">
                 <h3>2.2.2 CSS3 Requirements</h3>
                 <dl>
-                    <h4>A. CSS3 Formatting</h4>
+                    <dt>A. CSS3 Formatting</dt>
                     <dt><a href="about.html#history" target="_blank"> Paragraph and Header</a></dt>
                     <dd>An example of h2 and h3 headers and formatted paragraphs on the about page. They are formatted with a specific font-size and font-weight. The quote bubble uses blockquote > p to add a text-shadow to the quote paragraph.</dd>
                     <dt><a href="#nav-links"> List</a></dt>
@@ -165,20 +159,19 @@
                 </dl>
 
                 <dl id="multiple-selector">
-                    <h4>B. Contextual/ Attribute Selectors</h4>
-                    <dd>
-                            <dt><a href="contact.html#cancel" target="_blank">Attribute Selector 1</a></dt>
-                            <dd>Link takes you to the contact form where an attribute selector was used on the reset button to have a red background color (attribute[type="reset"]).</li>
-                            <dt><a href="evaluation.html#attribute2" target="_blank">Attribute Selector 2 and Sibling Selector</a></dt>
-                            <dd>This link navigates to the Evaluation web page and shows the star rating section where attribute selectors were used in combination with the subsequent-sibling combinator to change the star colour to gold when hovered over and for the selected stars to remain highlighted.</dd>
-                            <dt><a href="index.html#descendant-selector" target="_blank">Descendant Selector</a></dt>
-                            <dd>Link takes you to the Home page where the heading of the discover section was styled using the descendant combinator. Specifically, the font size and margins were applied.</dd>
-                            <dt><a href="about.html#quote-container" target="_blank">Child Combinator</a></dt>
-                            <dd>Link takes you to the About page where the child combinator was used to add text-shadow to the paragraph and box-shadow to the quote bubble.</dd>
-                            <dt><a href="#multiple-selector">Multiple Selector</a></dt>
-                            <dd>Link will highlight the box that you are currently viewing. Multiple selectors were used to style the text and font on this page collectively. The purpose of this was to increase the readability of the large amount of text. Multiple selectors were also used to style the input fields on the contact form on the contact page which can be viewed <a href="contact.html#contact-form">here</a>.</dd> 
-                    </dd>
-                </dl>                
+                    <dt>B. Contextual/ Attribute Selectors</dt>
+                        <dt><a href="contact.html#cancel" target="_blank">Attribute Selector 1</a></dt>
+                        <dd>Link takes you to the contact form where an attribute selector was used on the reset button to have a red background color (attribute[type="reset"]).</dd>
+                        <dt><a href="evaluation.html#attribute2" target="_blank">Attribute Selector 2 and Sibling Selector</a></dt>
+                        <dd>This link navigates to the Evaluation web page and shows the star rating section where attribute selectors were used in combination with the subsequent-sibling combinator to change the star colour to gold when hovered over and for the selected stars to remain highlighted.</dd>
+                        <dt><a href="index.html#descendant-selector" target="_blank">Descendant Selector</a></dt>
+                        <dd>Link takes you to the Home page where the heading of the discover section was styled using the descendant combinator. Specifically, the font size and margins were applied.</dd>
+                        <dt><a href="about.html#quote-container" target="_blank">Child Combinator</a></dt>
+                        <dd>Link takes you to the About page where the child combinator was used to add text-shadow to the paragraph and box-shadow to the quote bubble.</dd>
+                        <dt><a href="#multiple-selector">Multiple Selector</a></dt>
+                        <dd>Link will highlight the box that you are currently viewing. Multiple selectors were used to style the text and font on this page collectively. The purpose of this was to increase the readability of the large amount of text. Multiple selectors were also used to style the input fields on the contact form on the contact page which can be viewed <a href="contact.html#contact-form">here</a>.</dd>
+                </dl>
+
                 <dl>
                     <dt>C.<a href="#nav"> Color Styles(RGBA & HSLA Implementation)</a></dt>
                     <dd> RGBA and HSLA colors were implemented throughout the website. This link will highlight the navigation bar where rgba(0,0,0,0.125) was used to create a semi-transparent look to the navigation bar when scrolled all the way to the the top of the page for better contrast when viewing the links.</dd>
@@ -188,7 +181,7 @@
                     <dd> Highlights the navigation bar links to showcase the use of dynamic pseudo-classes. Here, the first-of-type (Home in this case) is green and the last-of-type is a brown-orange (Cross-Reference in the nav). All links on the website turn blue on focus or hover but only the main body links turn purple after being visited. The hyperlinks in the footer additionally have an underline when hovered over.</dd>
                 </dl>
                 <dl>
-                    <h4>E. Background Styles</h4>
+                    <dt>E. Background Styles</dt>
                     <dt><a href="#opacity-example1">Background Styles</a></dt>
                     <dd> This link will take you to the top of this page and highlight the background image. Styles such as background-size, background-origin and background-clip were used to position the image.</dd>
                     <dd> Another example of this is the background image on the Home page which can be viewed <a href="index.html#home-banner">here</a>. The background-size property was applied here. </dd>
@@ -204,7 +197,7 @@
                     <dd> Navigates to the quote section of the About page where the document content are defined with class and id properties. The classes are used extensively here to style the document for example .dicover-content sets a width of 65%, adds padding, adjusts the letter-spacing and line-height. #quote-container is used to position the quote section as well as style it with a background color, border and a border shadow.</dd>
                 </dl>
                 <dl>
-                    <h4>H. Layout Techniques</h4>
+                    <dt>H. Layout Techniques</dt>
                     <dt>i. <a href="contact.html" target="_blank">Grid Layout Techniques</a></dt>
                     <dd> This link takes you to the Contact page where I used grid layout techniques to style the page.</dd>
                     <dt>ii. <a href="index.html" target="_blank">Flex Layout Techniques</a></dt>
@@ -223,7 +216,7 @@
                     <dd> On the about page there is an svg of a turkish flag that I applied the CSS3 transform rotate property to.</dd>
                 </dl>
                 <dl>
-                    <h4>K. Image Opacity</h4>
+                    <dt>K. Image Opacity</dt>
                     <dt><a href="#opacity-example1">Image Opacity 1</a></dt>
                     <dd> This link scrolls this page to the top to highlight the background image applied to the header section. There is an opacity of 0.4 applied to the image to make the navigation links more legible.</dd>   
                     <dd> Alternatively, you can view another example of this on the <a href="menu.html#menu-header-image" target="_blank">Menu page</a>.</dd>
@@ -237,7 +230,7 @@
                 <dl>
                     <dt>A. <a href="contact.html#reason" target="_blank">Form Elements</a></dt>
                     <dd> This link highlights the "Reason for Contacting Us" select menu input field on the Contact us form. The form incorporates several HTML5 form elements and this specific example uses the select element to allow the user to choose from a list of options.</dd>
-                    <div class="code-example">                    
+                    <dd class="code-example">                    
                         <pre><code>
                             &lt;label for="reason"&gt;Reason for Contacting Us&lt;span class="required"&gt; *&lt;/span&gt;&lt;/label&gt;
                             &lt;select name="reason" id="reason" required&gt;
@@ -249,10 +242,10 @@
                                 &lt;option value="other"&gt;Other&lt;/option&gt;
                             &lt;/select&gt;                    
                         </code></pre>
-                    </div>
+                    </dd>
                     <dt>B. <a href="contact.html#buttons" target="_blank">Form Styling</a></dt>
                     <dd> This example highlights the buttons on the Contact us form. The buttons are styled with CSS to have a hover effect and different background colours for both buttons.</dd>
-                    <div class="code-example">                    
+                    <dd class="code-example">                    
                         <pre><code>
                             input[type="submit"] {
                                 background-color: hsla(129, 60%, 35%, 0.751);
@@ -265,20 +258,19 @@
                                 background-color: #0056b3;
                             }                   
                         </code></pre>
-                    </div>
+                    </dd>
                     <dt>C. <a href="contact.html#email" target="_blank">Inline Form Validation</a></dt>
                     <dd>Inline validation feedback is provided using focus pseudo-classes for all the required fields. The example highlights the "Email address" input field where the CSS provides a red border when the field is in focus until the user inputs a valid email address, at which point the border turns green.</dd>
-                        <div class="code-example">                    
-                            <pre><code>
-                                input:focus:invalid {
-                                    border: 2px solid red;
-                                }                            
-                                input:focus:valid {
-                                    border: 2px solid var(--highlight-text-color);
-                                }                    
-                            </code></pre>
-                        </div>    
-                    </dd>
+                    <dd class="code-example">                    
+                        <pre><code>
+                            input:focus:invalid {
+                                border: 2px solid red;
+                            }                            
+                            input:focus:valid {
+                                border: 2px solid var(--highlight-text-color);
+                            }                    
+                        </code></pre>
+                    </dd>    
                 </dl>
             </div>
             
@@ -292,7 +284,7 @@
                     <dd> Link to the homepage where there is a 30 second video clip of Turkish coffee being made on top of coal.</dd>
                     <dt>B. <a href="menu.html#sound-example1" target="_blank">Transitions & Animations</a></dt>
                     <dd> Link to the menu page where a keyframes animation is applied to dynamically display the music invitation banner and a transition is applied to the hover effect of the banner.</dd>
-                    <div class="code-example">                    
+                    <dd class="code-example">                    
                         <pre><code>
                             .music-invitation {
                                 background-color: var(--accent-color);
@@ -308,20 +300,19 @@
                                 }
                             }                   
                         </code></pre>
-                    </div>
+                    </dd>
                 </dl>
             </div>
         
             <div class="requirement">
                 <h3>2.2.5 JavaScript Requirements</h3>
                 <dl>
-                    <p>Programming Constructs</p>
+                    <dt>A. Programming Constructs</dt>
                     <dd>    
-                        <dl id="nested-list">
-                            
+                        <dl id="js-nested-list">  
                             <dt>A. i. <a href="#localTimeClock">Variables, Arithmetic, Functions, Subroutines, Operators etc.</a></dt>
                             <dd> This link highlights the Navigation clock feature where 9 of the 10 javascript requirements are implemented. Code snippet examples of each are provided below. </dd>
-                            <div class="code-example" id="java1">
+                            <dd class="code-example" id="java1">
                                 <pre><code>
 //=======================================
 // FILE: main.js SECTION: Time Clock
@@ -354,10 +345,10 @@
     setInterval(updateDisplay, 1000);
 }
                                 </code></pre>
-                            </div>
+                            </dd>
                             <dt>A. ii. <a href="contact.html#contact-form" target="_blank">Arrays</a></dt>
                             <dd> This link takes you to the contact form section of the Contact us page to showcase the implementation of arrays, the remaining javascript requirement. The Array is used to handle the form fields and validate them. It will retrieve the specified form elements with cOrder ID then uses .forEach to iterate over it. The relevant code snippet is provided below.</dd>
-                            <div class="code-example" id="java2">
+                            <dd class="code-example" id="java2">
                                 <pre><code>
 //===========================================================
 // FILE: contact-form.js SECTION: Contact Form Validation
@@ -378,12 +369,12 @@ form.querySelectorAll('input, select, textarea').forEach(field => {
     }
 });
                                 </code></pre>
-                            </div>
+                            </dd>
                         </dl>
                     </dd>
                     <dt>B. <a href="#java3">System Date</a></dt>
                     <dd> This example will highlight the relevant code snippet below for the Navigation Clock feature that utilizes the System Date to display the current time.</dd>
-                    <div class="code-example" id="java3">
+                    <dd class="code-example" id="java3">
                         <pre><code>
 //=======================================
 // FILE: main.js SECTION: Time Clock
@@ -391,11 +382,11 @@ form.querySelectorAll('input, select, textarea').forEach(field => {
 // SYSTEM DATE EXAMPLE
 const now = new Date();
                         </code></pre>
-                    </div>
+                    </dd>
                     <dd>  The clock feature is displayed on the navigation bar and is viewable at all times. It has live updates as well as a border and status indicator that changes colour depending on whether the store is open or closed.</dd>
                     <dt>C. <a href="contact.html#contact-form" target="_blank">Form Input Validation</a></dt>
                     <dd> This link takes you to the contact form section on the Contact us page. The form uses form validation functions to prevent the form from being submitted if the required fields are empty or with invalid entries. An error message will be displayed above the relevant input field. The code snippet is provided below.</dd>
-                    <div class="code-example" id="java4">
+                    <dd class="code-example" id="java4">
                         <pre><code>
 //==========================
 // FORM VALIDATION FUNCTIONS
@@ -434,11 +425,11 @@ function showError(element, message) {
 function clearAllErrors() {
     //...
                         </code></pre>
-                    </div>
+                    </dd>
                     <dd> The validation functions check the form fields like full name and email. If they are empty or invalid, it calls the showError function to display relevant error messages. Invalid entries are prevented from being submitted with event.preventDefault() and clearAllErrors() is called to clear the error messages.</dd>
                     <dt>D. <a href="contact.html#submit" target="_blank">JavaScript Alerts</a></dt>
                     <dd> Navigates to the submit button on the contact form section of the Contact us page. If a user inputs invalid entries in to the fields then clicks submit, an alert message will prompt the user to correct them and error messages are displayed at the top of the input fields. An alert is also displayed if the user successfully completes the form without any errors.</dd>
-                    <div class="code-example" id="java5">
+                    <dd class="code-example" id="java5">
                         <pre><code>
 //================
 // ALERT EXAMPLES
@@ -453,21 +444,21 @@ if (!isValid) {
     alert('Please correct the errors in the form before submitting.');
 }
                         </code></pre>
-                    </div>
+                    </dd>
                 </dl>
             </div>
         
             <div class="requirement">
                 <h3>2.2.6 Responsive Design</h3>
                 <dl>
-                    <p>Responsive Design Techniques on Different Devices</p>
+                    <dt>Responsive Design Techniques on Different Devices</dt>
                     <dd>    
                         <dl id="nested-list">
                             <dt>A. i. <a href="menu.html#menu-container" target="_blank">Mobile Design</a></dt>
                             <dd> The link takes you to the Menu page where the image and description of the menu items will switch to a vertical layout if the screen size is below 768px. You can also view another example of the mobile design on the <a href="evaluation.html#evaluation-form" target="_blank">Evaluation page</a>. </dd>
                             <dd> More notable changes are the navigation bar at the top and the footer elements. The navigation links become hidden within a hamburger icon and the footer content are hidden within an accordion.</dd>
                             <dd> Code snippets are provided below to show some of the different examples of the mobile design. Flexbox, grid, float and positioning are all utilized for these design changes. </dd>
-                            <div class="code-example" id="java1">
+                            <dd class="code-example">
                                 <pre><code>
 //===========================================================
 // FONT SIZES
@@ -549,10 +540,10 @@ if (!isValid) {
     }
 }
                                 </code></pre>
-                            </div>
+                            </dd>
                             <dt>A. ii. <a href="contact.html" target="_blank">Tablet Design</a></dt>
                             <dd> This link takes you to the About page to show some minor adjustments to the positioning of different elements for tablet design. The CSS code snippets provided below show the font size changes, the changes to the hero image and the changes to the quote reference on the About page.</dd>
-                            <div class="code-example" id="">
+                            <dd class="code-example">
                                 <pre><code>
                                     @media (min-width: 768px) and (max-width: 991px) {
                                         body {
@@ -590,11 +581,11 @@ if (!isValid) {
                                           .reference {
                                               bottom: -40%;
                                 </code></pre>
-                            </div>
+                            </dd>
                         
                         <dt>A. iii. <a href="menu.html" target="_blank">Desktop Design</a></dt>
                         <dd> This link takes you to the Contact Us page which utilises media queries to adjust the grid layout to accomodate larger screens. The contact form and the embedded map are displayed side by side instead of one above the other like in the mobile design and are spaced farther apart. Other adjustments include hiding of mobile navigation and an increased font size. There is also an additonal media query to target even larger screens. The relevant CSS code snippets are provided below.</dd>
-                            <div class="code-example" id="java2">
+                            <dd class="code-example">
                             <pre><code>
                                 @media (min-width: 992px) {
                                     html {
@@ -647,13 +638,12 @@ if (!isValid) {
                                     grid-template-rows: 10% 5% 15% 10% 30%;
 
                             </code></pre>
-                        </div>
-                        </dl>
-                    </dd>
+                        </dd>
+                    </dl>
                     <dt>B. <a href="#responsiveB" target="_blank">Contextual Selectors for Sub-menus and Navicon</a></dt>
                     <dd> This link will highlight the code snippet below which shows the CSS used to style the mobile navigation. The first example below shows the selector targetting active navigation items that have submenus.</dd>
                     <dd> The second example shows contextual selectors for styling the navicon. To view the mobile design with the navicon you must resize the browser window or use a mobile device.</dd>
-                    <div class="code-example" id="responsiveB">
+                    <dd class="code-example" id="responsiveB">
                         <pre><code>
 //===========================================================
 // FILE: mobile.css SECTION: Mobile Navigation
@@ -684,10 +674,10 @@ if (!isValid) {
     transition: 0.4s;
 }
                         </code></pre>
-                    </div>
+                    </dd>
                     <dt>C. <a href="#responsive2" target="_blank">Responsive Images</a></dt>
                     <dd> This link takes you back to the Home page and highlights the hero image. This image like the other images on the site has styles that allow it to scale proportionally or adjust to accomodate different screen sizes. The code snippet below shows the CSS used to achieve this.</dd>
-                    <div class="code-example" id="responsive2">
+                    <dd class="code-example" id="responsive2">
                         <pre><code>
 // BASE DESIGN
 .hero {
@@ -719,7 +709,7 @@ if (!isValid) {
         gap: 1.5rem;
     }
                         </code></pre>
-                    </div>
+                    </dd>
                 </dl>
             </div>
         </section>
@@ -735,13 +725,12 @@ if (!isValid) {
                         <i class="fas fa-file-download"></i> Download Project Documentation (PDF)
                         </a>
                         <div class="pdf-container">
-                            <iframe src="https://drive.google.com/file/d/1FdulQ6O5_931qE743xFxgO_orpFhx37n/preview" width="100%" height="700" allow="autoplay"></iframe>
+                            <iframe src="https://drive.google.com/file/d/1FdulQ6O5_931qE743xFxgO_orpFhx37n/preview" style="width: 100%; aspect-ratio: 0.9/1;" allow="autoplay"></iframe>
                         </div>
                         
                     </dd>   
                 </dl>
             </div>
-        
             <div class="requirement">
                 <h3>B. Web Page Flow</h3>
                 <img src="../media/images/site-map.png" alt="site map" class="site-map">
@@ -750,7 +739,6 @@ if (!isValid) {
 
         <section id="evaluation">
             <h2>2.4 Demonstration Evaluation Form</h2>
-        
             <div class="requirement">
                 <h3>Evaluation Form</h3>
                 <dl>
@@ -759,13 +747,9 @@ if (!isValid) {
                     <dd>The form is provides an opportunity for the business to grade the website based on the design and usability. The first part of the form has several categories that can be rated from unsatisfactory to excellent so the business can pinpoint the areas of concern. They can then provide their overall score using a star rating system. The second portion of the form gives the business the ability to rate each page to further pinpoint the improvement areas. The final part is the comment section where any additional feedback can be provided.</dd>
                 </dl>
             </div>
-        
-        </section>
-
-
-            </section>
-        </section>
+        </section>   
     </main>
+
     <footer>
         <div class="footer-content" id="footer">
             <div class="footer-accordion">
